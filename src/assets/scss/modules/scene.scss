@@ -1,0 +1,28 @@
+.scene {
+  width: 100vw;
+  height: 100vh;
+  background: #18161d;
+  perspective: 900px;
+  perspective-origin: center;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
+
+  &__ground {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    // background: #403c49;
+    perspective: 10000px;
+    transform-style: preserve-3d;
+    transition: 0.2s ease-in-out;
+    will-change: transform;
+    transform: translateZ(-30vh) translateX(58vw) translateY(10vh)
+      rotateX(45deg) rotateZ(-35deg);
+
+    &:hover {
+      transform: translateZ(-30vh) translateX(48vw) translateY(8vh)
+        rotateX(30deg) rotateZ(-30deg);
+    }
+  }
+}
